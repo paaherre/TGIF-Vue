@@ -1,0 +1,39 @@
+*{
+    font-family: 'Gochi Hand', cursive;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 2em;
+}
+.navbar{
+    padding: 0;
+}
+#navbarSupportedContent ul li{
+    padding: 8px;
+}
+#navbarSupportedContent ul li:hover{
+    
+    background-color:lightgray;
+}
+.navbar-brand{
+    padding: 12px;
+}
+.navbar-brand:hover{
+    background-color:lightgray;
+}
+
+footer p{
+    margin: 0;
+}
+table td, th{
+    text-align: center;
+    border: 1px solid black;
+}
+
+.showInfo{
+    color: blue;
+    margin-left: 10vw;
+    cursor: pointer;
+}
