@@ -7,6 +7,10 @@ const app = Vue.createApp({
                 })
             },
             data: [],
+            mostEngaged: [],
+            leastEngaged: [],
+            mostLoyal: [],
+            leastLoyal: [],
             stateSelected: "all",
             partyChecked: ["R", "D", "I"],
             moreInfo: 'Show More'
@@ -24,6 +28,10 @@ const app = Vue.createApp({
             .then(res => res.json())
             .then(json => {
                 this.data = json.results[0].members
+                this.mostEngaged = this.engagedData('missed_votes_pct').mostEngaged
+                this.leastEngaged = this.engagedData('missed_votes_pct').leastEngaged
+                this.leastLoyal = this.engagedData('votes_with_party_pct').mostEngaged
+                this.mostLoyal = this.engagedData('votes_with_party_pct').leastEngaged
             })
     },
     methods: {
@@ -130,5 +138,6 @@ const app = Vue.createApp({
                 this.moreInfo = 'Show More'
             }
         }
-    }
+    },
+
 })
